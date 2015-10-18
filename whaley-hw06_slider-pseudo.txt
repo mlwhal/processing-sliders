@@ -1,0 +1,57 @@
+Marika Whaley, DGM 6108
+Homework, Week 6, Slider
+19 May 2012
+
+Pseudocode for interactive sketch using objects.
+
+Objective: Sketch a set of three interactive sliders that change the fill color of a square ("test window") on the screen. Use objects.
+
+--Variable initialization:
+Initialize three slider objects
+Set variables for the default fill color of the test window
+
+--void setup:
+Screen size
+Background color and simple diagonal design
+Text instructions for moving the sliders with the mouse, and resetting with a keystroke
+Instantiate new slider objects at three different y positions and with three different fill colors
+
+--void draw:
+Draw test window with default fill color
+Call display method for three slider objects
+
+--void mouseDragged:
+Call drag method for three slider objects
+Change variables for fill colors of test window
+Print fill color values for debugging purposes
+
+--void keyPressed:
+Reset variables for fill colors of test window to 0
+Call reset method for slider objects
+
+--class Slider:
+Define variables for:
+  x position of slider rectangles
+  width and height of rectangles
+  Boolean variable to test whether the mouse is inside the slider
+Declare variable for y position of sliders w/no starting value
+
+--Constructor method for Slider:
+Two parameters: int yPosition and color slideCol
+Set y variable to yPosition
+Set slideColor variable to slideCol
+
+--Display method
+Draw invariant components of slider (rectangle and line) with 'y' for y coordinate
+Set fill color of slider button to slideColor variable
+Draw slider button
+If mouse is inside slider rectangle, fill color changes to white
+
+--Drag method
+Test whether the mouse is inside the slider rectangle and set boolean variable accordingly
+Move slider incrementally on x axis if mouse is inside slider
+Limit range of x to the line on which the slider is drawn
+
+--Reset method
+Set x variable back to original value
+
